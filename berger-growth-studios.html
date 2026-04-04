@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berger Growth Studios UG – Fractional CMO & Measurement Intelligence</title>
+    <meta name="description" content="Kyra Berger provides fractional CMO services and innovative measurement solutions for scale-ups and enterprises in DACH markets.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --charcoal: #2d3436;
+            --slate: #636e72;
+            --cream: #ffeaa7;
+            --offwhite: #fafafa;
+            --border: #e1e4e8;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--offwhite);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            padding: 32px 0;
+            background: white;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--charcoal);
+        }
+        
+        .hero {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 20px;
+            color: var(--slate);
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+        
+        .hero-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--slate);
+            margin-bottom: 16px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--slate);
+            margin-bottom: 48px;
+            font-weight: 600;
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px 32px;
+            margin-bottom: 24px;
+        }
+        
+        .client-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--charcoal);
+            text-align: center;
+            min-height: 100px;
+        }
+        
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .industry-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .industry-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .industry-card p {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        
+        .service-category h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 16px;
+        }
+        
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 48px;
+            border-radius: 12px;
+            margin-top: 48px;
+        }
+        
+        .highlight-box h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .highlight-box p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        footer {
+            background: var(--charcoal);
+            color: white;
+            padding: 48px 0;
+            margin-top: 80px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        
+        .footer-section h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+        
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .footer-section a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 968px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .hero-image {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero {
+                padding: 48px 0;
+            }
+            
+            .section {
+                padding: 48px 0;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px 16px;
+            }
+            
+            .industries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Berger Growth Studios</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-image">
+                    <!-- Replace this with your professional photo -->
+                    <img src="kyra-berger-photo.jpg" alt="Kyra Berger">
+                </div>
+                <div class="hero-content">
+                    <h1>Fractional CMO &<br>Measurement Intelligence</h1>
+                    <p class="subtitle">Kyra Berger · Berlin</p>
+                    <p>I'm a growth operator and measurement specialist with 12+ years building marketing engines for scale-ups and enterprises across DACH markets. I've led teams at Horizn Studios, Nuri, and Crossmedia, managing seven-figure budgets and guiding performance marketing, CRM, and brand strategy from seed stage through hypergrowth.</p>
+                    <p>Today I work as a fractional CMO and provide innovative attribution solutions that reconcile platform data, analytics, and MMM into a single decision layer—helping teams move faster with confidence in what's working.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Clients</h2>
+            <div class="clients-grid">
+                <div class="client-logo">TUI</div>
+                <div class="client-logo">Etihad Airways</div>
+                <div class="client-logo">Horizn Studios</div>
+                <div class="client-logo">Nuri (ex. Bitwala)</div>
+                <div class="client-logo">Blinkist</div>
+                <div class="client-logo">Volkswagen</div>
+                <div class="client-logo">Deutsche Bahn</div>
+                <div class="client-logo">Taxfix</div>
+                <div class="client-logo">Heycar</div>
+                <div class="client-logo">Timeless Investments</div>
+                <div class="client-logo">CareerFoundry</div>
+                <div class="client-logo">BMW / Mini</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Industries</h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <h3>Travel & Tourism</h3>
+                    <p>Global media planning for airlines, tour operators, and hospitality brands. Full-funnel campaigns driving awareness and bookings across brand and performance channels.</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Fintech & Banking</h3>
+                    <p>Go-to-market strategy for crypto banking, neobanks, and investment platforms. Navigating regulatory constraints while scaling user acquisition and retention.</p>
+                </div>
+                <div class="industry-card">
+                    <h3>E-commerce & DTC</h3>
+                    <p>End-to-end growth marketing for consumer brands. Performance optimization, creative strategy, CRM automation, and lifecycle marketing at scale.</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Automotive</h3>
+                    <p>Digital campaigns for OEMs and mobility platforms. Product launches, test drive generation, and innovative subscription models for EV adoption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3>Fractional CMO</h3>
+                    <ul class="service-list">
+                        <li>Interim Head of Marketing / VP Growth roles</li>
+                        <li>Marketing strategy & roadmap development</li>
+                        <li>Team building, coaching, and leadership</li>
+                        <li>Budget planning and P&L ownership</li>
+                        <li>Cross-functional stakeholder management</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3>Performance & Growth</h3>
+                    <ul class="service-list">
+                        <li>Full-funnel performance marketing (Meta, TikTok, Google, Pinterest)</li>
+                        <li>CRM & lifecycle marketing automation</li>
+                        <li>Conversion rate optimization & growth experiments</li>
+                        <li>Creative strategy & performance content</li>
+                        <li>Analytics, tracking, and attribution setup</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Measurement Intelligence</h3>
+                <p>I'm building Calibr—a measurement intelligence platform that reconciles multi-source attribution data (platform ads managers, Adobe Analytics, MMM, backend revenue) into an AI-powered decision interface. It's designed to replace manual reporting workflows and give teams a single source of truth for what's driving growth.</p>
+                <p style="margin-top: 16px;">Currently offering free audits and early access to select clients. If you're spending €50k+/month on paid media and struggling with attribution conflicts, let's talk.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Kyra Berger<br>
+                    <a href="mailto:kyra.berger@me.com">kyra.berger@me.com</a><br>
+                    +49 170 482 4428</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p>
+                        Berger Growth Studios UG (haftungsbeschränkt)<br>
+                        [Geschäftsadresse folgt]<br>
+                        [Registergericht folgt]<br>
+                        <br>
+                        <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutzerklärung</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
