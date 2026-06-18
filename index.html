@@ -49,6 +49,23 @@ a:focus-visible,button:focus-visible{outline:2px solid #5A82A0;outline-offset:3p
 .btn-outline:hover{background:#141414!important;color:#FBFBF9!important}
 .btn-solid:hover{transform:translateY(-2px)}
 .footlink:hover{color:#141414!important}
+/* screenshot slots */
+.shot{margin:0}
+.shot__cap{margin:12px 0 0;font-size:12.5px;line-height:1.5;color:#6E6E68}
+.shot--on-green .shot__cap{color:rgba(255,255,255,.82)}
+.frame{position:relative;overflow:hidden;background:#EDEDE9}
+.frame__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.frame__label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:16px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9b9b94}
+.frame__label b{font-weight:700;color:#6E6E68;letter-spacing:.04em;text-transform:none;font-size:12px}
+.frame--desktop{aspect-ratio:16/10;border:1px solid rgba(20,20,20,.14)}
+.phone{width:clamp(160px,64%,208px);aspect-ratio:300/612;margin:0 auto;background:#000;border-radius:38px;padding:8px;box-shadow:0 30px 60px -32px rgba(0,0,0,.55)}
+.phone .frame{width:100%;height:100%;border-radius:30px;background:#1b1b1b}
+.phone .frame__label{color:rgba(255,255,255,.5)}
+.phone .frame__label b{color:rgba(255,255,255,.74)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,44px);margin-top:clamp(40px,5vw,56px)}
+.golden{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,64px);align-items:center}
+@media(max-width:760px){.pillars{grid-template-columns:1fr;gap:40px}}
+@media(max-width:860px){.golden{grid-template-columns:1fr;gap:36px}}
 </style>
 
 <!-- JSON-LD: ProfessionalService -->
@@ -100,12 +117,12 @@ a:focus-visible,button:focus-visible{outline:2px solid #5A82A0;outline-offset:3p
   <div class="hero__grid" style="display:grid;grid-template-columns:1fr 1fr;min-height:clamp(480px,76vh,700px)">
     <div style="display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,76px) clamp(28px,4vw,56px) clamp(40px,6vw,76px) calc(clamp(20px,5vw,72px) + max(0px, (100vw - 1440px) / 2))">
       <h1 style="margin:0;font-weight:600;line-height:1.02;letter-spacing:-.025em;font-size:clamp(40px,6.4vw,82px)">Better paid media starts one layer down.</h1>
-      <p style="margin:26px 0 0;max-width:40ch;font-size:clamp(17px,1.6vw,20px);color:#6E6E68">We build the layer your paid media depends on, then run and scale the buying on top.</p>
+      <p style="margin:26px 0 0;max-width:50ch;font-size:clamp(17px,1.6vw,20px);color:#6E6E68">We built the measurement layer your spend depends on, and we automate the manual, error-prone workflows that paid teams still run by hand. Then we plan and run the buying on top, so the numbers you steer by match the revenue you bank.</p>
       <div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap">
         <a href="#contact" class="btn-solid" style="display:inline-flex;align-items:center;font-weight:500;font-size:14px;letter-spacing:.01em;padding:13px 22px;border:1px solid #141414;border-radius:0;background:#141414;color:#FBFBF9;text-decoration:none;transition:transform .18s">Start with an audit</a>
         <a href="#do" class="btn-outline" style="display:inline-flex;align-items:center;font-weight:500;font-size:14px;letter-spacing:.01em;padding:13px 22px;border:1px solid #141414;border-radius:0;color:#141414;text-decoration:none;transition:background .18s,color .18s">How it works</a>
       </div>
-      <p style="margin-top:auto;padding-top:36px;font-size:12px;letter-spacing:.06em;color:#6E6E68">A studio founded and led by Kyra Berger</p>
+      <p style="margin-top:auto;padding-top:36px;font-size:12px;letter-spacing:.06em;color:#6E6E68">A studio founded and led by Kyra Berger.</p>
     </div>
     <div class="hero__media"><img src="assets/hero-portrait.jpg" alt="Kyra Berger, portrait on a dark backdrop" style="width:100%;height:100%;object-fit:cover;object-position:58% 28%"></div>
   </div>
@@ -139,26 +156,71 @@ a:focus-visible,button:focus-visible{outline:2px solid #5A82A0;outline-offset:3p
   </div>
 </section>
 
-<section id="measure" style="padding:clamp(58px,8vw,108px) 0;background:#0A8F55;color:#FBFBF9">
+<section id="conflict" style="padding:clamp(58px,8vw,108px) 0;background:#FBFBF9">
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
-    <div class="measure" style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,64px);align-items:center">
+    <div style="max-width:62ch">
+      <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6E6E68">The conflict</p>
+      <p style="margin:18px 0 0;font-size:clamp(20px,2.4vw,28px);font-weight:500;line-height:1.32;letter-spacing:-.015em;color:#141414">Most teams steer paid media on numbers that disagree. Meta claims credit that Google also claims. GA4 hands it to brand and direct. The finance export tells a fourth story. So the weekly meeting goes to arguing about whose number is right instead of moving budget.</p>
+    </div>
+  </div>
+</section>
+
+<section id="measure" class="shot--on-green" style="padding:clamp(58px,8vw,108px) 0;background:#0A8F55;color:#FBFBF9">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <div style="max-width:62ch">
+      <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78)">The IP</p>
+      <h2 style="margin:13px 0 0;font-weight:600;line-height:1.02;letter-spacing:-.025em;font-size:clamp(28px,4vw,46px)">BGS Measure</h2>
+      <p style="margin:18px 0 0;max-width:56ch;color:rgba(255,255,255,.95);font-size:18px">BGS Measure pulls those sources into one operating view, flags what moved and why, then turns it into a short list of budget calls for the week.</p>
+    </div>
+
+    <figure class="shot" style="margin:clamp(36px,5vw,56px) 0 0">
+      <div class="frame frame--desktop">
+        <span class="frame__label">Screenshot 1<b>bgs-measure-onemove.png</b></span>
+        <img class="frame__img" src="/assets/bgs-measure-onemove.png" alt="The week's highest-impact budget move, surfaced and ranked." onerror="this.remove()">
+      </div>
+      <figcaption class="shot__cap">The week's highest-impact budget move, surfaced and ranked.</figcaption>
+    </figure>
+
+    <div class="pillars">
       <div>
-        <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78)">The IP</p>
-        <h2 style="margin:13px 0 0;font-weight:600;line-height:1.02;letter-spacing:-.025em;font-size:clamp(28px,4vw,46px)">BGS Measure</h2>
-        <p style="margin:18px 0 0;max-width:56ch;color:rgba(255,255,255,.95);font-size:18px">Our own measurement engine. It reconciles platform claims and last click into one defensible read of what your spend actually drove, then goes further: it surfaces the anomalies behind the numbers, explains why they happened, and turns them into concrete next actions. Not another report nobody reads. A decision layer.</p>
-        <div style="display:flex;gap:20px;margin-top:22px;flex-wrap:wrap">
-          <span style="font-size:12.5px;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:8px"><i style="width:14px;height:3px;display:inline-block;background:#E8795C"></i>Attribution</span>
-          <span style="font-size:12.5px;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:8px"><i style="width:14px;height:3px;display:inline-block;background:#9DBBD0"></i>Anomaly detection</span>
-          <span style="font-size:12.5px;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:8px"><i style="width:14px;height:3px;display:inline-block;background:#FBFBF9"></i>Optimisation</span>
-        </div>
+        <h3 style="margin:0;font-weight:600;letter-spacing:-.01em;font-size:20px">Reconcile.</h3>
+        <p style="margin:10px 0 0;color:rgba(255,255,255,.9);font-size:15.5px;line-height:1.6">Platform claims, GA4 and your backend revenue brought into one read you can trust.</p>
       </div>
-      <div style="display:flex;justify-content:center">
-        <div aria-label="BGS Measure on mobile" style="width:clamp(248px,80%,300px);aspect-ratio:300/612;background:#000;border-radius:44px;padding:11px;box-shadow:0 40px 80px -36px rgba(0,0,0,.7);position:relative">
-          <div style="width:100%;height:100%;border-radius:34px;overflow:hidden;background:#1b1b1b;position:relative">
-            <img src="assets/bgs-measure-scroll.gif" alt="BGS Measure product, scrolled on mobile" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block">
-          </div>
-        </div>
+      <div>
+        <h3 style="margin:0;font-weight:600;letter-spacing:-.01em;font-size:20px">Diagnose.</h3>
+        <p style="margin:10px 0 0;color:rgba(255,255,255,.9);font-size:15.5px;line-height:1.6">What changed and the likely cause, so you don't cut spend over a tracking break or chase a fake PMax number.</p>
+        <figure class="shot" style="margin:22px 0 0">
+          <div class="phone"><div class="frame"><span class="frame__label">Screenshot 2<b>bgs-measure-diagnosis.png</b></span><img class="frame__img" src="/assets/bgs-measure-diagnosis.png" alt="Every anomaly comes with its likely cause, not just the alert." onerror="this.remove()"></div></div>
+          <figcaption class="shot__cap">Every anomaly comes with its likely cause, not just the alert.</figcaption>
+        </figure>
       </div>
+      <div>
+        <h3 style="margin:0;font-weight:600;letter-spacing:-.01em;font-size:20px">Steer.</h3>
+        <p style="margin:10px 0 0;color:rgba(255,255,255,.9);font-size:15.5px;line-height:1.6">The week's data turned into specific budget moves, with the confidence behind each one.</p>
+        <figure class="shot" style="margin:22px 0 0">
+          <div class="phone"><div class="frame"><span class="frame__label">Screenshot 3<b>bgs-measure-budget.png</b></span><img class="frame__img" src="/assets/bgs-measure-budget.png" alt="Cut, hold and scale, previewed before anything changes." onerror="this.remove()"></div></div>
+          <figcaption class="shot__cap">Cut, hold and scale, previewed before anything changes.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="golden" style="padding:clamp(58px,8vw,108px) 0;background:#FBFBF9">
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+    <div class="golden">
+      <div>
+        <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6E6E68">The method</p>
+        <h2 style="margin:13px 0 0;font-weight:600;line-height:1.04;letter-spacing:-.025em;font-size:clamp(28px,4vw,46px)">The Golden Middle</h2>
+        <p style="margin:18px 0 0;max-width:52ch;color:#6E6E68;font-size:17px;line-height:1.7">Platform reporting tends to over-claim. Last-click tends to under-credit the demand-creating work higher up the funnel. The Golden Middle is the reconciled read BGS Measure settles between them, checked against the revenue your backend recorded. It is a working number to steer by, honest about its limits and sharpened over time as we feed in lift tests.</p>
+      </div>
+      <figure class="shot" style="margin:0">
+        <div class="frame frame--desktop">
+          <span class="frame__label">Screenshot 4<b>bgs-measure-reconcile.png</b></span>
+          <img class="frame__img" src="/assets/bgs-measure-reconcile.png" alt="Platform, last-click and backend, resolved into one read." onerror="this.remove()">
+        </div>
+        <figcaption class="shot__cap">Platform, last-click and backend, resolved into one read.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -308,7 +370,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #5A82A0;outline-offset:3p
   <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,72px);text-align:center">
     <p style="margin:0;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6E6E68">Contact</p>
     <h2 style="margin:13px 0 0;font-weight:600;line-height:1.02;letter-spacing:-.025em;font-size:clamp(28px,4vw,46px)">Start with an audit.</h2>
-    <p style="margin:18px auto 30px;color:#6E6E68;max-width:38ch">New projects and referrals welcome.</p>
+    <p style="margin:18px auto 30px;color:#6E6E68;max-width:58ch;line-height:1.7">Start with a media systems audit. Over two weeks we go through your tracking, attribution, channel structure and reporting, then hand you a reconciled read of what your spend is doing, the gaps costing you money and a plan for the next quarter.</p>
     <a href="mailto:kyra@bergergrowthstudios.com?subject=BGS%20Audit%20request%3A%20%5Byour%20company%5D&amp;body=Hi%20Kyra%2C%0D%0A%0D%0AI%27d%20like%20to%20request%20a%20measurement%20audit.%20Details%20below.%0D%0A%0D%0A-%20Company%3A%20%0D%0A-%20Website%3A%20%0D%0A-%20Monthly%20paid%20media%20budget%3A%20%0D%0A-%20Active%20paid%20channels%3A%20%0D%0A-%20Attribution%20and%20reporting%20tools%3A%20%0D%0A-%20Name%20and%20role%3A%20%0D%0A-%20LinkedIn%3A%20%0D%0A-%20Biggest%20question%20you%20want%20answered%20%28optional%29%3A%20%0D%0A" class="btn-solid" style="display:inline-flex;align-items:center;font-weight:500;font-size:14px;letter-spacing:.01em;padding:13px 22px;border:1px solid #141414;border-radius:0;background:#141414;color:#FBFBF9;text-decoration:none;transition:transform .18s">Get in touch</a>
   </div>
 </section>
